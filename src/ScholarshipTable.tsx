@@ -70,28 +70,14 @@ export const ScholarshipTable = ({
             },
           };
         } else {
-          // Try local Next.js API route first, fall back to direct API
-          const isLocalDev = typeof window !== 'undefined' &&
-            (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-
-          if (isLocalDev) {
-            // Use local proxy for development
-            url = `/api/webflow-proxy?collectionId=${collectionId}&apiToken=${encodeURIComponent(apiToken)}`;
-            fetchOptions = {
-              headers: {
-                'accept': 'application/json',
-              },
-            };
-          } else {
-            // Direct API call (will fail with CORS on Webflow, but shows clear error)
-            url = `https://api.webflow.com/v2/collections/${collectionId}/items/live`;
-            fetchOptions = {
-              headers: {
-                'Authorization': `Bearer ${apiToken}`,
-                'accept': 'application/json',
-              },
-            };
-          }
+          // Always use the Next.js API proxy route to avoid CORS issues
+          // Works for both local dev and deployed environments
+          url = `/app/api/webflow-proxy?collectionId=${collectionId}&apiToken=${encodeURIComponent(apiToken)}`;
+          fetchOptions = {
+            headers: {
+              'accept': 'application/json',
+            },
+          };
         }
 
         const response = await fetch(url, fetchOptions);
