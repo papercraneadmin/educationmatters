@@ -1,0 +1,17 @@
+{
+  "library": {
+    "name": "EducationMatters Components",
+    "components": [
+      "./src/**/*.webflow.@(js|jsx|mjs|ts|tsx)"
+    ],
+    "description": "Specific library of blocks for EducationMatters",
+    "id": "educationmatters-components"
+  },
+  "telemetry": {
+    "global": {
+      "allowTelemetry": true,
+      "lastPrompted": 1761142076030,
+      "version": "1.8.46"
+    }
+  }
+}
