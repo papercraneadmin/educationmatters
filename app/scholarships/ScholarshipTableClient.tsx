@@ -244,42 +244,32 @@ export function ScholarshipTableClient({
         <table className="table table-zebra w-full">
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Title</th>
+              <th>Donor</th>
               <th>School</th>
               <th>Category</th>
-              <th>Amount</th>
-              <th>Deadline</th>
-              <th>Link</th>
+              <th>Field of Study</th>
+              <th>Value</th>
+              <th>Available</th>
             </tr>
           </thead>
           <tbody>
-            {paginatedScholarships.map((scholarship, index) => (
-              <tr key={index}>
-                <td>{scholarship.name}</td>
+            {paginatedScholarships.map((scholarship) => (
+              <tr key={scholarship.id}>
+                <td>{scholarship.title}</td>
+                <td>{scholarship.donor}</td>
                 <td>{scholarship.school}</td>
                 <td>
                   <span className="badge badge-primary">{scholarship.category}</span>
                 </td>
-                <td>{scholarship.amount}</td>
-                <td>{scholarship.deadline}</td>
-                <td>
-                  {scholarship.link && (
-                    <a
-                      href={scholarship.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-sm btn-primary"
-                    >
-                      Apply
-                    </a>
-                  )}
-                </td>
+                <td>{scholarship.fieldOfStudy}</td>
+                <td>{scholarship.value}</td>
+                <td>{scholarship.available}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-
       {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex justify-center">
