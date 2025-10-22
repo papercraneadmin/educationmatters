@@ -1,0 +1,4 @@
+.fa-solid {
+  transition: transform 300ms ease;
+  font-family: var(--font--family--fa--solid);
+}

@@ -1,4 +1,11 @@
 {
+  "cloud": {
+    "framework": "nextjs"
+  },
+  "devlink": {
+    "rootDir": "./src/devlink",
+    "cssModules": true
+  },
   "library": {
     "name": "EducationMatters Components",
     "components": [

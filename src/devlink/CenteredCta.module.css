@@ -1,0 +1,161 @@
+.section {
+  position: relative;
+
+  display: flex;
+  padding-top: var(--_responsiveness---section--padding-y);
+  padding-bottom: var(--_responsiveness---section--padding-y);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section.home-hero {
+  min-height: 45rem;
+}
+
+@media screen and (max-width: 991px) {
+  .section.home-hero {
+    min-height: 65rem;
+    padding-top: 12rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.section.home-awards {
+  min-height: 40rem;
+}
+
+@media screen and (max-width: 767px) {
+  .section.home-awards {
+    min-height: 50rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.section.hero {
+  min-height: 45rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.section.hero:where(.w-variant-4f6ed31e-5ca8-326e-c67a-45e711416410) {
+  color: var(--color--primitives--white);
+}
+
+@media screen and (max-width: 767px) {
+  .section.hero {
+    padding-top: 8rem;
+  }
+}
+
+.section.school-list-section {
+  background-color: var(--_theme---brand--yellow);
+}
+
+.section.awards-list-section {
+  background-color: var(--_theme---brand--blue);
+  color: var(--color--primitives--white);
+}
+
+.section.awards-list-section.awards-page {
+  background-color: transparent;
+}
+
+.section.about-split {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.section.resources-section {
+  background-color: var(--_theme---brand--purple);
+}
+
+.section.faq-section {
+  grid-column-gap: 10rem;
+  grid-row-gap: 10rem;
+}
+
+.section.splitter-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.container {
+  position: relative;
+
+  display: flex;
+  width: 87.5rem;
+  max-width: 94%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.flex {
+  display: flex;
+  grid-column-gap: var(--size--gap--md);
+  grid-row-gap: var(--size--gap--md);
+}
+
+.container.flex {
+  position: relative;
+  z-index: 5;
+
+  width: var(--_responsiveness---container--container);
+  max-width: var(--_responsiveness---container--max);
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container.home-hero {
+  position: relative;
+  z-index: 2;
+}
+
+.container.home-cta {
+  position: relative;
+  z-index: 2;
+}
+
+.container.about-container {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.container.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.container.award-upper-cont {
+  margin-bottom: 3.5rem;
+}
+
+.container.awards-page {
+  padding: 2rem;
+  border-radius: 1.31rem;
+  background-color: var(--_theme---brand--blue);
+}
+
+@media screen and (max-width: 767px) {
+  .container.awards-page {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container.awards-page {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blue-text {
+    color: var(--_theme---brand--blue);
+  }
+}

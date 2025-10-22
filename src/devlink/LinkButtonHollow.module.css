@@ -1,0 +1,92 @@
+.button {
+  position: relative;
+
+  display: flex;
+  padding: 0.62rem 1.25rem;
+  align-items: center;
+  grid-column-gap: var(--size--gap--xs);
+  grid-row-gap: var(--size--gap--xs);
+
+  border: 2px solid var(--_theme---brand--red);
+  border-radius: var(--size--gap--xs);
+
+  background-color: #eb292a;
+
+  transition: color 250ms ease,background-color 250ms ease;
+
+  font-family: 'Neuehaasdisplay Mediu';
+  color: var(--_button-style---button--text);
+  font-size: 1rem;
+  font-weight: 500;
+
+  ---mode--collection-fd117fac-dd75-69c5-5660-2f60819d632b: base;
+}
+
+.button:where(.w-variant-a9a5f232-3704-5995-87cf-fcae1d273319) {
+  ---mode--collection-fd117fac-dd75-69c5-5660-2f60819d632b: mode-c35ef6dd-a0a2-4c61-8597-23f320188473;
+}
+
+.button:where(.w-variant-d142d88f-d7eb-f26b-17ee-5e8cea6ccb00) {
+  ---mode--collection-fd117fac-dd75-69c5-5660-2f60819d632b: mode-c35ef6dd-a0a2-4c61-8597-23f320188473;
+}
+
+.button:where(.w-variant-3cab36f5-0373-fe1c-0d23-d0c0c77c2a31) {
+  border-color: var(--_theme---brand--blue);
+  background-color: var(--_theme---brand--blue);
+  color: var(--color--primitives--white);
+}
+
+.button:where(.w-variant-5c7e5d58-0549-3fa1-ebd4-ff5a1a480d3d) {
+  border-color: var(--_theme---brand--yellow);
+  background-color: var(--_theme---brand--yellow);
+  transition: border-color 250ms ease,color 250ms ease,background-color 250ms ease;
+  color: var(--color--primitives--black);
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--_theme---brand--red);
+}
+
+.button:hover:where(.w-variant-5c7e5d58-0549-3fa1-ebd4-ff5a1a480d3d) {
+  border-color: var(--color--primitives--black);
+  background-color: var(--color--primitives--black);
+  color: var(--_theme---brand--yellow);
+}
+
+.button:hover:where(.w-variant-3cab36f5-0373-fe1c-0d23-d0c0c77c2a31) {
+  background-color: var(--color--primitives--white);
+  color: var(--_theme---brand--blue);
+}
+
+.button.hollow {
+  height: auto;
+  border: 2px solid var(--color--primitives--white);
+  background-color: transparent;
+  font-family: 'Neuehaasdisplay Mediu';
+}
+
+.button.hollow:where(.w-variant-d4d362db-f202-a712-9195-6c50f75719fa) {
+  border-color: var(--color--primitives--black);
+  color: var(--color--primitives--black);
+}
+
+.button.hollow:where(.w-variant-c9a24f9e-d4c6-c62c-cc62-c6cfa872940f) {
+  border-color: var(--_theme---brand--yellow);
+  color: var(--_theme---brand--yellow);
+}
+
+.button.hollow:hover {
+  background-color: var(--color--primitives--white);
+  color: var(--color--primitives--black);
+}
+
+.button-text {
+  line-height: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.button-text:where(.w-variant-3cab36f5-0373-fe1c-0d23-d0c0c77c2a31) {
+  font-family: 'Neuehaasdisplay Mediu';
+}

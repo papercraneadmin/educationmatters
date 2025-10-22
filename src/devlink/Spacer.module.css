@@ -1,0 +1,7 @@
+.spacer:where(.w-variant-bcc85fad-9ab5-7810-3116-529eb921607b) {
+  background-color: var(--color--brand--primary);
+}
+
+.spacer:where(.w-variant-d20eec58-d61e-cd61-e756-41ad44bf9e57) {
+  background-color: var(--color--brand--brand-text);
+}

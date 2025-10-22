@@ -1,0 +1,235 @@
+.nav {
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+
+  display: flex;
+  width: 100%;
+  padding-top: 0.81rem;
+  padding-bottom: 0.81rem;
+  justify-content: center;
+
+  transition: box-shadow 250ms ease,padding 250ms ease,background-color 250ms ease;
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    display: flex;
+    color: hsla(0, 0.00%, 100.00%, 1.00);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .nav {
+    display: block;
+  }
+}
+
+.nav.section {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  transition: transform 450ms cubic-bezier(.215, .61, .355, 1);
+}
+
+@media screen and (max-width: 991px) {
+  .nav.section {
+    display: flex;
+  }
+}
+
+.section {
+  position: relative;
+
+  display: flex;
+  padding-top: var(--_responsiveness---section--padding-y);
+  padding-bottom: var(--_responsiveness---section--padding-y);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--color--primitives--white);
+  box-shadow: 0 -2px 10px 0 rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  max-width: 96%;
+  justify-content: space-between;
+}
+
+.nav-brand.wh:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  position: relative;
+  width: 8.1875rem;
+  height: 3.375rem;
+}
+
+.nav-brand.wh:global(.w--current) {
+  position: relative;
+  width: 8.1875rem;
+  height: 3.375rem;
+}
+
+.nav-brand.wh:global(.w--current):where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-brand.wh {
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+.nav-brand.blk {
+  display: none;
+}
+
+.nav-brand.blk:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-brand.blk {
+    position: relative;
+    z-index: 9999;
+  }
+}
+
+.logo-svg {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+
+  width: 8.1875rem;
+  height: 3.375rem;
+}
+
+.logo-svg:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  display: none;
+}
+
+.logo-svg.blk {
+  display: none;
+}
+
+.logo-svg.blk:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-links {
+    position: absolute;
+    left: 101%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+
+    width: 100%;
+    height: 100svh;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    background-color: white;
+
+    transition: left 500ms ease;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-links.active {
+    left: 0%;
+    transform: translate(0px, 0px);
+  }
+}
+
+.nav-link {
+  transition: color 250ms ease;
+  color: var(--color--primitives--white);
+}
+
+.nav-link:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  color: var(--color--primitives--black);
+}
+
+.nav-link:global(.w--current) {
+  text-decoration: underline;
+}
+
+.nav-link:global(.w--current):where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+  font-weight: var(--font--weight--heading);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-link {
+    color: var(--color--brand--brand-text);
+  }
+}
+
+.nav-link.scrolled {
+  color: var(--_button-style---button--hover--text);
+}
+
+.nav-ham {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-ham {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-ham:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-ham {
+    filter: invert(100%);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-ham:where(.w-variant-d98f4456-caed-8359-f60f-befe649ac3c3) {
+    filter: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ham-lottie {
+    width: 6rem;
+    height: 6rem;
+  }
+}
