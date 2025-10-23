@@ -63,16 +63,15 @@ export const ScholarshipTable = ({
 
         if (proxyUrl) {
           // Use custom proxy URL (for production deployment)
-          url = `${proxyUrl}?collectionId=${collectionId}&apiToken=${encodeURIComponent(apiToken)}`;
+          url = `${proxyUrl}?collectionId=${collectionId}`;
           fetchOptions = {
             headers: {
               'accept': 'application/json',
             },
           };
         } else {
-          // Always use the Next.js API proxy route to avoid CORS issues
-          // Works for both local dev and deployed environments
-          url = `/app/api/webflow-proxy?collectionId=${collectionId}&apiToken=${encodeURIComponent(apiToken)}`;
+          // Use Next.js API proxy route - API token handled server-side via env vars
+          url = `/app/api/webflow-proxy?collectionId=${collectionId}`;
           fetchOptions = {
             headers: {
               'accept': 'application/json',

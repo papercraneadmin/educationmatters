@@ -1,16 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 export async function GET(request: NextRequest) {
   try {
+    // Get environment variables from Cloudflare Workers context
+    const { env } = getCloudflareContext();
+
     const searchParams = request.nextUrl.searchParams;
-    const collectionId = searchParams.get('collectionId');
-    const apiToken = searchParams.get('apiToken');
+    const collectionId = searchParams.get('collectionId') || env.WEBFLOW_COLLECTION_ID;
+    const apiToken = env.WEBFLOW_API_TOKEN;
 
     console.log('Proxy request received:', { collectionId, hasToken: !!apiToken });
 
     if (!collectionId || !apiToken) {
       return NextResponse.json(
-        { error: 'Missing collectionId or apiToken' },
+        { error: 'Missing collectionId or WEBFLOW_API_TOKEN environment variable' },
         { status: 400 }
       );
     }
